@@ -1,0 +1,74 @@
+{
+  "trained_on": "2026-04-29T21:14:50",
+  "tickers": [
+    "TSLA",
+    "NVDA",
+    "AAPL",
+    "MSFT",
+    "GOOGL",
+    "BRK-B",
+    "JNJ",
+    "KO",
+    "CVX",
+    "^GSPC"
+  ],
+  "use_vix": true,
+  "window_size": 30,
+  "forecast_horizon": 5,
+  "input_cols": [
+    "Volume",
+    "return",
+    "daily_range",
+    "daily_volatility",
+    "weekly_volatility_fast",
+    "weekly_volatility_slow",
+    "yearly_volatility",
+    "MA_20",
+    "MA_50",
+    "vix_close",
+    "vix_return",
+    "vix_ma_20",
+    "vix_rolling_std_20"
+  ],
+  "target_col": "target_volatility",
+  "lstm_units": 32,
+  "dense_units": 16,
+  "dropout": 0.3,
+  "learning_rate": 0.001,
+  "epochs_requested": 500,
+  "epochs_run": 38,
+  "early_stopped": true,
+  "patience": 15,
+  "train_frac": 0.8,
+  "val_frac": 0.1,
+  "validation_metrics": {
+    "model": {
+      "rmse": 0.020556468804336796,
+      "mae": 0.01331370510160923,
+      "r2": 0.5340542793273926,
+      "mape": 0.499126672744751
+    },
+    "naive": {
+      "rmse": 0.026289550738101644,
+      "mae": 0.01702800951898098,
+      "r2": 0.2379128336906433,
+      "mape": 0.5681266188621521
+    },
+    "improvement_pct_vs_naive": 21.80745494998455
+  },
+  "test_metrics": {
+    "model": {
+      "rmse": 0.019315395557800225,
+      "mae": 0.012203877791762352,
+      "r2": 0.3874329924583435,
+      "mape": 0.5241341590881348
+    },
+    "naive": {
+      "rmse": 0.02488778778150301,
+      "mae": 0.015832509845495224,
+      "r2": -0.01699531078338623,
+      "mape": 0.6250258088111877
+    },
+    "improvement_pct_vs_naive": 22.39006645598398
+  }
+}

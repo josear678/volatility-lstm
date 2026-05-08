@@ -1,0 +1,2 @@
+[console_scripts]
+train-volatility-lstm = src.train:main

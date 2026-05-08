@@ -1,0 +1,18 @@
+{
+  "numeric_cols": [
+    "Volume",
+    "return",
+    "daily_range",
+    "daily_volatility",
+    "weekly_volatility_fast",
+    "weekly_volatility_slow",
+    "yearly_volatility",
+    "MA_20",
+    "MA_50",
+    "vix_close",
+    "vix_return",
+    "vix_ma_20",
+    "vix_rolling_std_20"
+  ],
+  "target_col": "target_volatility"
+}
