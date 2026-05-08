@@ -1,0 +1,15 @@
+# Pinned production dependencies — what the model itself needs.
+# For development extras (pytest, jupyterlab) install via:
+#     pip install -e ".[dev]"
+# or use requirements-dev.txt.
+
+numpy==2.1.3
+pandas==2.3.3
+pyarrow==21.0.0           # parquet support for the data cache
+
+tensorflow>=2.15,<3.0     # broad pin: TF 2.20 wheels lag on some platforms
+scikit-learn==1.7.2
+joblib==1.5.2
+
+yfinance==1.2.0
+matplotlib==3.10.6
